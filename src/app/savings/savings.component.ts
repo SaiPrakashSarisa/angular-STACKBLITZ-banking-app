@@ -17,6 +17,10 @@ import {
 export class SavingsComponent implements OnInit {
   users: any[] = [];
 
+  matchusers: any[] = [];
+
+  semiMatchUsers: any[] = [];
+
   constructor() {}
 
   ngOnInit() {}
@@ -94,7 +98,35 @@ export class SavingsComponent implements OnInit {
       code: unicode,
     };
 
+    const userdata = localStorage.getItem('user');
+    // console.log(userdata, ' is user data');
+    this.users = userdata ? JSON.parse(userdata) : [];
+    // filter for semi match data
+    this.semiMatchUsers = this.users.filter((userr) => {
+      return (
+        userr.code.slice(1, 5) === user.code.slice(1, 5) &&
+        userr.code.slice(0, 1) != user.code.slice(0, 1)
+      );
+    });
+    // console.log(this.semiMatchUsers, ' semi match users');
+    localStorage.setItem('semi', JSON.stringify(this.semiMatchUsers));
+
+    // filter for full match data
+    this.matchusers = this.users.filter((userr) => {
+      return (
+        userr.code.slice(1) === user.code.slice(1) &&
+        userr.code.slice(0, 1) != user.code.slice(0, 1)
+      );
+    });
+    // console.log(this.matchusers, ' full match user');
+    localStorage.setItem('full', JSON.stringify(this.matchusers));
+
     this.users.push(user);
+
+    //console.log(this.users, ' is the users');
+    // this.users.push(userdata);
+    console.log(this.users, ' is the pushed users');
+    localStorage.setItem('user', JSON.stringify(this.users));
 
     console.log(this.users);
   }
