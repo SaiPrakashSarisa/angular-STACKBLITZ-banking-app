@@ -12,6 +12,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SavingsComponent } from './savings/savings.component';
+import { UserdataComponent } from './userdata/userdata.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SavingsComponent } from './savings/savings.component';
     DashboardComponent,
     ProfileComponent,
     SavingsComponent,
+    UserdataComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, FormsModule, AppRoutingModule],
   providers: [],

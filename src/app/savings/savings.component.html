@@ -2,42 +2,64 @@
 <div class="row">
   <div class="col">
     <div class="form-container">
-      <form>
+      <form [formGroup]="userForm" (ngSubmit)="submit()">
         <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" class="form-control" />
+          <label for="username">Name</label>
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            formControlName="username"
+          />
         </div>
 
         <div class="form-group">
           <label for="gender">Gender</label>
-          <select id="gender" class="form-control">
+          <select id="gender" class="form-control" formControlName="gender">
             <option value=""></option>
-            <option value="F">Female</option>
-            <option value="M">Male</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="age">Age</label>
-          <input type="number" id="age" class="form-control" />
+          <input
+            type="number"
+            id="age"
+            class="form-control"
+            formControlName="age"
+          />
         </div>
 
         <div class="form-group">
           <label for="education">Higher Education</label>
-          <select id="education" class="form-control">
+          <select
+            id="education"
+            class="form-control"
+            formControlName="education"
+          >
             <option value=""></option>
-            <option value="GS">10th</option>
-            <option value="GC">College</option>
-            <option value="GG">Graduation</option>
-            <option value="GP">Post Graduation</option>
-            <option value="GM">Masters</option>
-            <option value="GN">No Education</option>
+            <option value="10th">10th</option>
+            <option value="College">College</option>
+            <option value="Graduation">Graduation</option>
+            <option value="Post Graduation">Post Graduation</option>
+            <option value="Master">Masters</option>
+            <option value="No Education">No Education</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="dob">Date Of Birth</label>
-          <input type="date" id="dob" class="form-control" />
+          <input
+            type="date"
+            id="dob"
+            class="form-control"
+            formControlName="dob"
+          />
+        </div>
+        <div class="form-group">
+          <button class="form-control" type="submit">submit</button>
         </div>
       </form>
     </div>
