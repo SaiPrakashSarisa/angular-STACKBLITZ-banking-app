@@ -16,11 +16,22 @@
   padding: 5px;
 }
 
+.form-control:hover {
+  border-color: rgb(23, 129, 216);
+}
+
 .from-container {
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+button {
+  background-color: rgb(23, 129, 216);
+  border-color: transparent;
+  border-radius: 5px;
+  color: white;
 }
 
 table td {
