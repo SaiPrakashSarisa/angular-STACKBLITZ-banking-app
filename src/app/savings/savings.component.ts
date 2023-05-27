@@ -23,8 +23,6 @@ export class SavingsComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
-
   userForm = new FormGroup({
     username: new FormControl(''),
     gender: new FormControl(''),
@@ -128,6 +126,12 @@ export class SavingsComponent implements OnInit {
     console.log(this.users, ' is the pushed users');
     localStorage.setItem('user', JSON.stringify(this.users));
 
+    console.log(this.users);
+  }
+
+  ngOnInit() {
+    const userdata = localStorage.getItem('user');
+    this.users = userdata ? JSON.parse(userdata) : [];
     console.log(this.users);
   }
 }
