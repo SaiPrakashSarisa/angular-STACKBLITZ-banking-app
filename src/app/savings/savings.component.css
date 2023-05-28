@@ -1,8 +1,15 @@
 * {
   margin: 0;
   padding: 0;
+  color: white;
 }
 
+.row {
+  height: 85vh;
+  overflow: auto;
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/465/84/846/digital-art-minimalism-animals-owl-wallpaper-thumb.jpg);
+  background-size: cover;
+}
 .form-group {
   margin: 10px;
   height: auto;
@@ -56,7 +63,6 @@ th {
   text-transform: uppercase;
   background: -webkit-linear-gradient(left, #25c481, #25b7c4);
   background: linear-gradient(to right, #25c481, #25b7c4);
-  
 }
 
 tr:hover {
