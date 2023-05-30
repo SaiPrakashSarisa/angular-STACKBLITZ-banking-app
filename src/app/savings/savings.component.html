@@ -74,31 +74,29 @@
       {{ match.code }}
     </p>
   </div>
-  <br />
-  <div class="">
-    <div class="col">
-      <div class="sem-col">
-        <table>
-          <thead>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Age</th>
-            <th>Education</th>
-            <th>Data of Birth</th>
-            <th>UID</th>
-          </thead>
-          <tbody>
-            <tr *ngFor="let user of users">
-              <td>{{ user.username }}</td>
-              <td>{{ user.gender }}</td>
-              <td>{{ user.age }}</td>
-              <td>{{ user.education }}</td>
-              <td>{{ user.dob }}</td>
-              <td>{{ user.code }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+
+  <div class="col">
+    <div class="sem-col">
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Age</th>
+          <th>Education</th>
+          <th>Data of Birth</th>
+          <th>UID</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.username }}</td>
+            <td>{{ user.gender }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.education }}</td>
+            <td>{{ user.dob }}</td>
+            <td>{{ user.code }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
