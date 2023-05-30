@@ -14,6 +14,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { SavingsComponent } from './savings/savings.component';
 import { UserdataComponent } from './userdata/userdata.component';
 import { SavingComponent } from './saving/saving.component';
+import { CreditcardComponent } from './creditcard/creditcard.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { SavingComponent } from './saving/saving.component';
     SavingsComponent,
     UserdataComponent,
     SavingComponent,
+    CreditcardComponent,
+    CardComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, FormsModule, AppRoutingModule],
   providers: [],

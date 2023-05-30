@@ -9,6 +9,7 @@ import { ProfileComponent } from '../profile/profile.component';
 import { SavingsComponent } from '../savings/savings.component';
 import { UserdataComponent } from '../userdata/userdata.component';
 import { SavingComponent } from '../saving/saving.component';
+import { CreditcardComponent } from '../creditcard/creditcard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'savings', component: SavingsComponent },
   { path: 'userdata', component: UserdataComponent },
   { path: 'usersavings', component: SavingComponent },
+  { path: 'creditcards', component: CreditcardComponent },
 ];
 
 @NgModule({

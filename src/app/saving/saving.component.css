@@ -7,19 +7,70 @@
   height: 85vh;
   display: flex;
   flex-direction: row;
+  background: linear-gradient(to right, #709ebd, #2c3e50);
 }
 
 .balance-transactions {
-  width: 75%;
+  width: 70%;
 }
 
-.balance {
-  height: 15%;
+.balance-outer {
+  height: 20%;
   display: flex;
+}
+
+.balance-inner {
+  background-color: lightgray;
+  min-height: 40%;
+  min-width: 25%;
+  width: 30%;
+  margin: 20px 20px;
+  border-radius: 12px;
+}
+
+.label,
+.value {
+  margin: 2px;
+  padding: 5px;
+  width: 95%;
+}
+
+.value {
+  font-size: 1.5rem;
+}
+
+.transactions {
+  margin: 5px 20px;
+}
+
+.transactions p {
+  font-size: 2rem;
+  margin: 10px 0px;
+}
+
+table {
+  border-collapse: collapse;
+}
+table thead {
+  background-color: #ddd0c8;
+  padding: 8px 40px;
+}
+table td,
+th {
+  padding: 8px 40px;
+}
+table tr {
   background-color: black;
+  color: white;
+  border-collapse: separate;
+}
+
+table tr:hover {
+  opacity: 1.6;
+  background-color: #ddd0c8;
+  color: black;
 }
 
 .payment {
-  width: 25%;
-  background-color: blanchedalmond;
+  width: 30%;
 }
