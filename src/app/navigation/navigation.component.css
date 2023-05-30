@@ -7,10 +7,11 @@
   display: flex;
 }
 
-h3 {
+.ul .h3 {
+  display: flex;
+  align-items: center;
   color: white;
   background-color: black;
-  padding: 13px;
 }
 
 .ul li {
@@ -18,7 +19,7 @@ h3 {
   list-style: none;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 15px;
+  padding: 30.5px;
   cursor: pointer;
   transition: color 0.5s, background-color 0.5s;
 }

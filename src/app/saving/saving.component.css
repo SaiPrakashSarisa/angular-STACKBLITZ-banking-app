@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.balance-transactions {
+  width: 75%;
+}
+
+.balance {
+  height: 15%;
+  display: flex;
+  background-color: black;
+}
+
+.payment {
+  width: 25%;
+  background-color: blanchedalmond;
+}

@@ -8,6 +8,7 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ProfileComponent } from '../profile/profile.component';
 import { SavingsComponent } from '../savings/savings.component';
 import { UserdataComponent } from '../userdata/userdata.component';
+import { SavingComponent } from '../saving/saving.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'savings', component: SavingsComponent },
   { path: 'userdata', component: UserdataComponent },
+  { path: 'usersavings', component: SavingComponent },
 ];
 
 @NgModule({

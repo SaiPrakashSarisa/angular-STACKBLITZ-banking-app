@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SavingsComponent } from './savings/savings.component';
 import { UserdataComponent } from './userdata/userdata.component';
+import { SavingComponent } from './saving/saving.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { UserdataComponent } from './userdata/userdata.component';
     ProfileComponent,
     SavingsComponent,
     UserdataComponent,
+    SavingComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, FormsModule, AppRoutingModule],
   providers: [],

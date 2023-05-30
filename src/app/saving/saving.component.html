@@ -1,0 +1,36 @@
+<app-navigation></app-navigation>
+<div class="container">
+  <div class="balance-transactions">
+    <div class="balance-outer">
+      <div class="balance-inner">
+        <p class="label">Current Balance</p>
+        <p class="value">{{ transactions[0].balance }}</p>
+      </div>
+    </div>
+    <div class="transactions">
+      <table>
+        <thead>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Amount</th>
+          <th>balance</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of transactions">
+            <td>{{ transaction.date }}</td>
+            <td>{{ transaction.time }}</td>
+            <td *ngIf="transaction.type === 'credit'" style="color:green">
+              {{ transaction.amount }}
+            </td>
+            <td *ngIf="transaction.type === 'debit'" style="color:red">
+              {{ transaction.amount }}
+            </td>
+            <td>{{ transaction.balance }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="payment"></div>
+</div>
+<app-footer></app-footer>
