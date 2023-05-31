@@ -6,4 +6,17 @@
 .container {
   height: 85vh;
   background: linear-gradient(to right, #709ebd, #2c3e50);
+  overflow: auto;
+}
+
+.inner-container {
+  height: 100%;
+
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 20px 50px;
 }

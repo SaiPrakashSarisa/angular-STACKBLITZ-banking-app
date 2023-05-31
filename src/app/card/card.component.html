@@ -1,0 +1,41 @@
+<div class="cards">
+  <div class="card">
+    <div class="card-front">
+      <div class="bank">
+        <h1>ICICI</h1>
+        <!-- <img src="/mastercard-4.svg" alt=""> -->
+      </div>
+      <div class="chip">
+        <img src="/chip.png" alt="chip" />
+      </div>
+      <div class="accno">
+        <div class="accnum">{{ creditCard.card1 }}</div>
+        <div class="accnum">{{ creditCard.card2 }}</div>
+        <div class="accnum">{{ creditCard.card3 }}</div>
+        <div class="accnum">{{ creditCard.card4 }}</div>
+      </div>
+      <div class="expire">
+        <div class="exp">
+          <span>EXP</span>
+          <span>DATE</span>
+        </div>
+        <div class="date">{{ creditCard.expdate }}</div>
+      </div>
+
+      <div class="cardholder">
+        <span>S.J.SAI PRAKASH</span>
+      </div>
+    </div>
+
+    <div class="card-back">
+      <div class="strip"></div>
+      <div class="signature">
+        <div class="sigcode"></div>
+        <div class="cvv">{{ creditCard.cvv }}</div>
+      </div>
+      <div class="holo">
+        <img src="/Hologram.png" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
