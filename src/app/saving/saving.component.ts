@@ -64,6 +64,11 @@ export class SavingComponent implements OnInit {
       balance: 1000,
     },
   ];
+
+  showDepositform: boolean = false;
+  showWithdrawform: boolean = false;
+  showTransferform: boolean = false;
+
   constructor() {}
 
   ngOnInit() {}

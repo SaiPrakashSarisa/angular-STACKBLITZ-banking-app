@@ -32,9 +32,40 @@
       </table>
     </div>
   </div>
-  <div class="payment"></div>
+  <div class="payment">
+    <div class="actions">
+      <button
+        class="btn"
+        (click)="showWithdrawform = !showWithdrawform"
+        type="button"
+      >
+        Withdraw
+      </button>
+      <button
+        class="btn"
+        (click)="showDepositform = !showDepositform"
+        type="button"
+      >
+        Deposit
+      </button>
+      <button
+        class="btn"
+        (click)="showTransferform = !showTransferform"
+        type="button"
+      >
+        Transfer
+      </button>
+    </div>
+  </div>
+  <div class="deposit float-form" *ngIf="showDepositform">
+    <app-depositform></app-depositform>
+  </div>
+  <div class="withdraw float-form" *ngIf="showWithdrawform">
+    <app-withdrawform></app-withdrawform>
+  </div>
+  <div class="transfer float-form" *ngIf="showTransferform">
+    <app-transferform></app-transferform>
+  </div>
 </div>
-<div class="deposit">
-  <app-depositform></app-depositform>
-</div>
+
 <app-footer></app-footer>
