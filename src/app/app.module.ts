@@ -16,6 +16,7 @@ import { UserdataComponent } from './userdata/userdata.component';
 import { SavingComponent } from './saving/saving.component';
 import { CreditcardComponent } from './creditcard/creditcard.component';
 import { CardComponent } from './card/card.component';
+import { DepositformComponent } from './saving/depositform/depositform.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CardComponent } from './card/card.component';
     SavingComponent,
     CreditcardComponent,
     CardComponent,
+    DepositformComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, FormsModule, AppRoutingModule],
   providers: [],
