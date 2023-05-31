@@ -2,11 +2,12 @@
   <div class="card">
     <div class="card-front">
       <div class="bank">
-        <h1>ICICI</h1>
+        <h1></h1>
+        <img [src]="creditCard.bank" alt="" />
         <!-- <img src="/mastercard-4.svg" alt=""> -->
       </div>
       <div class="chip">
-        <img src="/chip.png" alt="chip" />
+        <img src="assets/chip.png" alt="chip" />
       </div>
       <div class="accno">
         <div class="accnum">{{ creditCard.card1 }}</div>
@@ -24,6 +25,12 @@
 
       <div class="cardholder">
         <span>NARUTO UZUMAKI</span>
+      </div>
+
+      <div class="type">
+        <div class="type-in">
+          <img [src]="creditCard.type" alt="" height="20px" width="20px" />
+        </div>
       </div>
     </div>
 

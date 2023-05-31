@@ -1,8 +1,38 @@
 <app-navigation> </app-navigation>
 <div class="container">
   <div class="inner-container">
-    <div class="card" *ngFor="let card of creditCards">
+    <!-- <div class="card" *ngFor="let card of creditCards">
       <app-card [creditCard]="card"></app-card>
+    </div> -->
+
+    <div *ngFor="let card of creditCards">
+      <div [ngSwitch]="card.card">
+        <div *ngSwitchCase="'Credit'">
+          <button click="">Edit</button>
+          <p>{{ card.cardnumber }}</p>
+          <p>
+            {{ card.bank }} <img [src]="getBankLogo(card.bank)" width="50px" />
+          </p>
+          <p>
+            {{ card.cardType }}
+            <img [src]="getCardTypeLogo(card.cardType)" width="50px" />
+          </p>
+          <p>{{ card.expdate }}</p>
+        </div>
+  
+        <div *ngSwitchCase="'Debit'">
+          <p>{{ card.cardnumber }}</p>
+          <p>
+            {{ card.bank }} <img [src]="getBankLogo(card.bank)" width="50px" />
+          </p>
+          <p>
+            {{ card.cardType }}
+            <img [src]="getCardTypeLogo(card.cardType)" width="50px" />
+          </p>
+          <p>{{ card.expdate }}</p>
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>

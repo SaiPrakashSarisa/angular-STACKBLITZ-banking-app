@@ -127,6 +127,7 @@ export class SavingsComponent implements OnInit {
     localStorage.setItem('user', JSON.stringify(this.users));
 
     console.log(this.users);
+    this
   }
 
   ngOnInit() {
