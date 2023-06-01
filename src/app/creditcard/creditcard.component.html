@@ -1,9 +1,9 @@
 <app-navigation> </app-navigation>
 <div class="container">
-  <div class="form-container"></div>
   <div class="addcard">
     <button type="button" class="btn">Add New Card</button>
   </div>
+
   <div class="inner-container">
     <div class="card" *ngFor="let card of creditCards">
       <app-card [creditCard]="card"></app-card>

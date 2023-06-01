@@ -1,0 +1,43 @@
+<div class="form-container">
+  <div class="row">❌</div>
+
+  <div class="row">
+    <h1>Add New Card</h1>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <form>
+        <div class="form-group">
+          <input
+            type="number"
+            name="cardNumber"
+            formControlName="cardNumber"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="number"
+            name="cvv"
+            formControlName="cvv"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="form-control">
+          <select name="cardType" formControlName="cardType" required>
+            <option value="" disabled>choose your card type</option>
+            <option value="VISA">VISA</option>
+            <option value="MASTER">MASTER</option>
+            <option value="RUPAY">RUPAY</option>
+          </select>
+        </div>
+        <button class="btn">Add Card</button>
+      </form>
+    </div>
+  </div>
+</div>

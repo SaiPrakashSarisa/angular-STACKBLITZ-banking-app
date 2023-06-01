@@ -7,6 +7,10 @@
   height: 85vh;
   background: linear-gradient(to right, #709ebd, #2c3e50);
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .inner-container {
@@ -22,6 +26,7 @@
 
 .addcard {
   height: 10%;
+  width: 100%;
   display: flex;
   justify-content: right;
 }
@@ -40,6 +45,7 @@
 .form-container {
   position: absolute;
   z-index: 1;
+  border-radius: 12px;
   min-width: 300px;
   min-height: 300px;
   background-color: #0099ff;

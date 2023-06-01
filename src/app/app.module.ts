@@ -19,6 +19,7 @@ import { CardComponent } from './card/card.component';
 import { DepositformComponent } from './saving/depositform/depositform.component';
 import { WithdrawformComponent } from './saving/withdrawform/withdrawform.component';
 import { TransferformComponent } from './saving/transferform/transferform.component';
+import { NewcardformComponent } from './creditcard/newcardform/newcardform.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { TransferformComponent } from './saving/transferform/transferform.compon
     DepositformComponent,
     WithdrawformComponent,
     TransferformComponent,
+    NewcardformComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, FormsModule, AppRoutingModule],
   providers: [],
