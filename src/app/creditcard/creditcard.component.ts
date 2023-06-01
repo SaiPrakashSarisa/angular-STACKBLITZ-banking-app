@@ -16,7 +16,7 @@ export class CreditcardComponent implements OnInit {
       card2: '7060',
       card3: '0656',
       card4: '9012',
-      expdate: '11/30',
+      expDate: '11/30',
       cvv: '559',
       limit: 100000,
       availableAmount: 99500,
@@ -33,7 +33,7 @@ export class CreditcardComponent implements OnInit {
       card2: '0938',
       card3: '5096',
       card4: '0071',
-      expdate: '02/26',
+      expDate: '02/26',
       cvv: '489',
       limit: 100000,
       availableAmount: 91000,
@@ -50,7 +50,7 @@ export class CreditcardComponent implements OnInit {
       card2: '0063',
       card3: '1387',
       card4: '4321',
-      expdate: '05/32',
+      expDate: '05/32',
       cvv: '878',
       limit: 100000,
       availableAmount: 100000,
@@ -60,6 +60,11 @@ export class CreditcardComponent implements OnInit {
       card: 'Credit',
     },
   ];
+
+  // method for getting data form newcardform
+  addNewCard(newCardData: any) {
+    this.creditCards.push(newCardData);
+  }
 
   // banksLogos = [
   //   {

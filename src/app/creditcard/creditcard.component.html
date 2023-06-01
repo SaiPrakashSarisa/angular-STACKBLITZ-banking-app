@@ -23,7 +23,7 @@
             {{ card.cardType }}
             <img [src]="getCardTypeLogo(card.cardType)" width="50px" />
           </p>
-          <p>{{ card.expdate }}</p>
+          <p>{{ card.expDate }}</p>
         </div>
   
         <div *ngSwitchCase="'Debit'">
@@ -35,13 +35,13 @@
             {{ card.cardType }}
             <img [src]="getCardTypeLogo(card.cardType)" width="50px" />
           </p>
-          <p>{{ card.expdate }}</p>
+          <p>{{ card.expDate }}</p>
         </div>
       </div>
     </div> -->
   </div>
   <div class="cardform" *ngIf="newCardForm">
-    <app-newcardform></app-newcardform>
+    <app-newcardform (newCardAdded)="addNewCard($event)"></app-newcardform>
   </div>
 </div>
 <app-footer></app-footer>

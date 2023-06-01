@@ -7,7 +7,7 @@ interface CreditCard {
   card2: number;
   card3: number;
   card4: number;
-  expdate: string;
+  expDate: string;
   cardType: string;
   card: string;
   cvv: number;
@@ -27,6 +27,9 @@ export class CardComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  hologram: string =
+    'https://images.rawpixel.com/image_400/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQ0My01LTA5LWV5ZS0wMS5qcGc.jpg';
 
   banksLogos = [
     {

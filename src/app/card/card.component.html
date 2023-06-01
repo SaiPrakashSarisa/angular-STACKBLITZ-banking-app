@@ -1,4 +1,4 @@
-<div class="cards">
+<div class="cards" title="click on card to edit">
   <div class="card">
     <div class="card-front">
       <div class="bank">
@@ -19,7 +19,7 @@
           <span>EXP</span>
           <span>DATE</span>
         </div>
-        <div class="date">{{ creditCard.expdate }}</div>
+        <div class="date">{{ creditCard.expDate }}</div>
       </div>
 
       <div class="cardholder">
@@ -37,10 +37,10 @@
       <div class="strip"></div>
       <div class="signature">
         <div class="sigcode"></div>
-        <div class="cvv">{{ creditCard.cvv }}</div>
+        <div class="cvv">cvv {{ creditCard.cvv }}</div>
       </div>
       <div class="holo">
-        <img src="/Hologram.png" alt="" />
+        <img [src]="hologram" alt="img" />
       </div>
     </div>
   </div>
