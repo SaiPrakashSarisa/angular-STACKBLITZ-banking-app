@@ -1,11 +1,14 @@
 <app-navigation> </app-navigation>
 <div class="container">
+  <div class="addcard">
+    <button type="button" class="btn">Add New Card</button>
+  </div>
   <div class="inner-container">
-    <!-- <div class="card" *ngFor="let card of creditCards">
+    <div class="card" *ngFor="let card of creditCards">
       <app-card [creditCard]="card"></app-card>
-    </div> -->
+    </div>
 
-    <div *ngFor="let card of creditCards">
+    <!-- <div *ngFor="let card of creditCards">
       <div [ngSwitch]="card.card">
         <div *ngSwitchCase="'Credit'">
           <button click="">Edit</button>
@@ -32,8 +35,7 @@
           <p>{{ card.expdate }}</p>
         </div>
       </div>
-      
-    </div>
+    </div> -->
   </div>
 </div>
 <app-footer></app-footer>

@@ -3,11 +3,10 @@
     <div class="card-front">
       <div class="bank">
         <h1></h1>
-        <img [src]="creditCard.bank" alt="" />
-        <!-- <img src="/mastercard-4.svg" alt=""> -->
+        <img [src]="getBankLogo(creditCard.bank)" width="35px;" />
       </div>
       <div class="chip">
-        <img src="assets/chip.png" alt="chip" />
+        <img src="assets/chip.png" alt="" />
       </div>
       <div class="accno">
         <div class="accnum">{{ creditCard.card1 }}</div>
@@ -29,7 +28,7 @@
 
       <div class="type">
         <div class="type-in">
-          <img [src]="creditCard.type" alt="" height="20px" width="20px" />
+          <img [src]="getCardLogo(creditCard.cardType)" width="40px;" />
         </div>
       </div>
     </div>
