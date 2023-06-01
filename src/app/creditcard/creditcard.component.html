@@ -1,7 +1,9 @@
 <app-navigation> </app-navigation>
 <div class="container">
   <div class="addcard">
-    <button type="button" class="btn">Add New Card</button>
+    <button type="button" class="btn" (click)="newCardForm = !newCardForm">
+      Add New Card
+    </button>
   </div>
 
   <div class="inner-container">
@@ -38,7 +40,7 @@
       </div>
     </div> -->
   </div>
-  <div class="cardform">
+  <div class="cardform" *ngIf="newCardForm">
     <app-newcardform></app-newcardform>
   </div>
 </div>
