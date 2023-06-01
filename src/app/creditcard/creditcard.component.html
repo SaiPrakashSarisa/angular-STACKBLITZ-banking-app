@@ -7,7 +7,7 @@
   </div>
 
   <div class="inner-container">
-    <div class="card" *ngFor="let card of creditCards">
+    <div class="card" *ngFor="let card of creditCards" (click)="editCard(card)">
       <app-card [creditCard]="card"></app-card>
     </div>
 
@@ -42,6 +42,9 @@
   </div>
   <div class="cardform" *ngIf="newCardForm">
     <app-newcardform (newCardAdded)="addNewCard($event)"></app-newcardform>
+  </div>
+  <div class="editcardform" *ngIf="editCardForm">
+    <app-editcardform [cardData]="selectedCard"></app-editcardform>
   </div>
 </div>
 <app-footer></app-footer>

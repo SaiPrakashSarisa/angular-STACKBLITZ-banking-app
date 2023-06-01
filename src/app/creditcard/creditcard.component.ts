@@ -97,6 +97,9 @@ export class CreditcardComponent implements OnInit {
   // ];
 
   newCardForm: boolean = false;
+  editCardForm: boolean = true;
+
+  selectedCard: any;
 
   constructor(public _route: Router) {}
 
@@ -123,4 +126,9 @@ export class CreditcardComponent implements OnInit {
   //   });
   //   return logo;
   // }
+
+  editCard(card: any) {
+    this.selectedCard = card;
+    console.log(this.selectedCard);
+  }
 }
