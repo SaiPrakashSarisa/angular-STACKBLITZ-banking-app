@@ -42,11 +42,6 @@
   color: white;
 }
 
-.form-container {
+.cardform {
   position: absolute;
-  z-index: 1;
-  border-radius: 12px;
-  min-width: 300px;
-  min-height: 300px;
-  background-color: #0099ff;
 }
