@@ -66,36 +66,6 @@ export class CreditcardComponent implements OnInit {
     this.creditCards.push(newCardData);
   }
 
-  // banksLogos = [
-  //   {
-  //     bankName: 'SBI',
-  //     logo: 'https://www.freepnglogos.com/uploads/sbi-logo-png/image-sbi-logo-logopedia-fandom-powered-wikia-0.png',
-  //   },
-  //   {
-  //     bankName: 'ICICI',
-  //     logo: 'https://companieslogo.com/img/orig/IBN_BIG-9ec25662.png?t=1648383607',
-  //   },
-  //   {
-  //     bankName: 'HDFC',
-  //     logo: 'https://logodix.com/logo/840255.png',
-  //   },
-  // ];
-
-  // cardsTypeLogos = [
-  //   {
-  //     cardName: 'VISA',
-  //     logo: 'https://www.freepnglogos.com/uploads/visa-card-logo-9.png',
-  //   },
-  //   {
-  //     cardName: 'Rupay',
-  //     logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Rupay-Logo.png/800px-Rupay-Logo.png?20200811062726',
-  //   },
-  //   {
-  //     cardName: 'Master',
-  //     logo: 'https://www.mastercard.com/news/media/b5zamlev/mc_symbol_white.png?anchor=center&mode=crop&width=960&rnd=132530899096970000',
-  //   },
-  // ];
-
   newCardForm: boolean = false;
   editCardForm: boolean = true;
 
@@ -105,30 +75,24 @@ export class CreditcardComponent implements OnInit {
 
   ngOnInit() {}
 
-  // getBankLogo(bankName: string): any {
-  //   console.log('In getBankLogo bankName: ', bankName);
-  //   let logo;
-  //   this.banksLogos.forEach((ele) => {
-  //     if (ele.bankName == bankName) {
-  //       console.log('Card Found: ', ele);
-  //       logo = ele.logo;
-  //     }
-  //   });
-  //   return logo;
-  // }
-
-  // getCardTypeLogo(cardType: string): any {
-  //   let logo;
-  //   this.cardsTypeLogos.forEach((ele) => {
-  //     if (ele.cardName == cardType) {
-  //       logo = ele.logo;
-  //     }
-  //   });
-  //   return logo;
-  // }
-
   editCard(card: any) {
     this.selectedCard = card;
     console.log(this.selectedCard);
+  }
+
+  updateCard(updatedCard: any) {
+    this.creditCards.find((card) => {
+      if (card.cardNumber == this.selectedCard.cardNumber) {
+        card.cardNumber = updatedCard.cardNumber;
+        card.cvv = updatedCard.cvv;
+        card.cardType = updatedCard.cardType;
+        card.expDate = updatedCard.expDate;
+        card.bank = updatedCard.bank;
+        card.card1 = updatedCard.card1;
+        card.card2 = updatedCard.card2;
+        card.card3 = updatedCard.card3;
+        card.card4 = updatedCard.card4;
+      }
+    });
   }
 }

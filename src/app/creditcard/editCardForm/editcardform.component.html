@@ -5,7 +5,7 @@
 
   <div class="row">
     <div class="col">
-      <form [formGroup]="editFormGroup">
+      <form [formGroup]="editFormGroup" (ngSubmit)="editCard()">
         <div class="form-group">
           <input
             [value]="cardData?.cardNumber"
