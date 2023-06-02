@@ -1,6 +1,6 @@
 <div class="form-container">
   <div class="row">
-    <h1>Add New Card</h1>
+    <h1>Edit Card</h1>
   </div>
 
   <div class="row">
@@ -8,7 +8,7 @@
       <form [formGroup]="editFormGroup">
         <div class="form-group">
           <input
-            [value]="cardData.cardNumber"
+            [value]="cardData?.cardNumber"
             type="number"
             name="cardNumber"
             formControlName="cardNumber"
@@ -20,6 +20,7 @@
 
         <div class="form-group">
           <input
+            [value]="cardData?.cvv"
             type="number"
             name="cvv"
             formControlName="cvv"
@@ -31,6 +32,7 @@
 
         <div class="form-group">
           <input
+            [value]="cardData?.expDate"
             type="text"
             name="expDate"
             formControlName="expDate"
@@ -42,12 +44,13 @@
 
         <div class="form-group">
           <select
+            [value]="cardData?.bank"
             name="bank"
             formControlName="bank"
             class="form-control"
             required
           >
-            <option disabled>Choose bank</option>
+            <option disabled selected>Choose bank</option>
             <option value="SBI">SBI</option>
             <option value="HDFC">HDFC</option>
             <option value="ICICI">ICICI</option>
@@ -56,19 +59,20 @@
 
         <div class="form-group">
           <select
+            [value]="cardData?.cardType"
             name="cardType"
             formControlName="cardType"
             class="form-control"
             required
           >
-            <option disabled>Choose CardType</option>
+            <option disabled selected>Choose CardType</option>
             <option value="VISA">VISA</option>
             <option value="Master">MASTER</option>
             <option value="Rupay">RUPAY</option>
           </select>
         </div>
         <div class="form-group">
-          <button class="btn" type="submit">Add Card</button>
+          <button class="btn" type="submit">Edit Card</button>
         </div>
       </form>
     </div>

@@ -10,7 +10,7 @@ export class CreditcardComponent implements OnInit {
   creditCards: any[] = [
     {
       account: '202302134100',
-      cardnumber: '4152706006569012',
+      cardNumber: '4152706006569012',
       bank: 'SBI',
       card1: '4152',
       card2: '7060',
@@ -27,7 +27,7 @@ export class CreditcardComponent implements OnInit {
     },
     {
       account: '202302134100',
-      cardnumber: '5073093850960071',
+      cardNumber: '5073093850960071',
       bank: 'ICICI',
       card1: '5073',
       card2: '0938',
@@ -44,7 +44,7 @@ export class CreditcardComponent implements OnInit {
     },
     {
       account: '202302134100',
-      cardnumber: '4071006313874321',
+      cardNumber: '4071006313874321',
       bank: 'HDFC',
       card1: '4071',
       card2: '0063',

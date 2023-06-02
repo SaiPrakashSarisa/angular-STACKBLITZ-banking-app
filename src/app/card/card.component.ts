@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 interface CreditCard {
-  cardnumber: number;
+  cardNumber: number;
   bank: string;
   card1: number;
   card2: number;

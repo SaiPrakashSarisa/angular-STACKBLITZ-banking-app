@@ -11,7 +11,9 @@ export class EditcardformComponent implements OnInit {
   cardData: any;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.cardData);
+  }
 
   editFormGroup = new FormGroup({
     cardNumber: new FormControl(''),
