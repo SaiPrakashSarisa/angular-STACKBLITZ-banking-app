@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
   userName: string = 'Sai Prakash Sarisa';
+
+  user: any = {};
+
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    const user = localStorage.getItem('currentUser');
+
+    this.user = user ? JSON.parse(user) : {};
+  }
 }

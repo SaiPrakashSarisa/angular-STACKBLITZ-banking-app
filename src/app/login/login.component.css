@@ -21,6 +21,12 @@
   align-items: center;
 }
 
+.err {
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 .form-container {
   /* background-color: transparent; */
   background-color: white;

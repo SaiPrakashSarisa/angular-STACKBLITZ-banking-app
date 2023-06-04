@@ -4,13 +4,13 @@
   </div>
   <div class="row">
     <div class="col">
-      <form>
+      <form [formGroup]="withdrawForm" (ngSubmit)="deposit()">
         <div class="form-group">
-          <label for="password"></label>
+          <label for="amount"></label>
           <input
             type="text"
-            name="password"
-            formControlName="password"
+            name="amount"
+            formControlName="amount"
             class="form-control"
             placeholder="Enter Amount to Deposit"
             required
