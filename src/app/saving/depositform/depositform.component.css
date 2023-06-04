@@ -17,6 +17,17 @@
   border-radius: 10px;
   box-shadow: -10px 12px 10px black;
 }
+
+.err {
+  font-size: 0.8rem;
+  color: red;
+  text-align: center;
+}
+.sucess {
+  font-size: 0.9rem;
+  color: green;
+  text-align: center;
+}
 .row {
   margin: 10px;
 }

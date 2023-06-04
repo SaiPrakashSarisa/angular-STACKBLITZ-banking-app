@@ -16,7 +16,10 @@
             required
           />
           <button class="form-control btn" type="submit">Deposit</button>
-          <p *ngIf="errMessage">Enter amount more than 100</p>
+          <p *ngIf="errMessage" class="err">Enter amount more than 100</p>
+          <p *ngIf="sucessMessage" class="sucess">
+            {{ amount }} has been deposited
+          </p>
         </div>
       </form>
     </div>

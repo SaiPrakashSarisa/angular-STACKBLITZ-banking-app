@@ -28,6 +28,17 @@
   text-transform: uppercase;
 }
 
+.err {
+  font-size: 0.8rem;
+  color: red;
+  text-align: center;
+}
+.sucess {
+  font-size: 0.9rem;
+  color: green;
+  text-align: center;
+}
+
 .form-group {
   margin: 5px;
 }

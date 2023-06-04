@@ -11,6 +11,7 @@ export class DepositformComponent implements OnInit {
   user: any;
   transactions: any;
   errMessage: boolean = false;
+  sucessMessage: boolean = false;
   route: Router = new Router();
   depositForm = new FormGroup({
     amount: new FormControl('', [Validators.required, Validators.min(101)]),
@@ -59,6 +60,7 @@ export class DepositformComponent implements OnInit {
       this.transactions.push(currentTransaction);
       // updating the transactions arrya of objects in local storage
       localStorage.setItem('transactions', JSON.stringify(this.transactions));
+      this.sucessMessage = true;
     } else {
       this.errMessage = true;
     }
