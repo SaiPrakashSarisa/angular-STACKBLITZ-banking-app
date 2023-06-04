@@ -4,7 +4,7 @@
   </div>
   <div class="row">
     <div class="col">
-      <form [formGroup]="withdrawForm" (ngSubmit)="deposit()">
+      <form [formGroup]="depositForm" (ngSubmit)="deposit()">
         <div class="form-group">
           <label for="amount"></label>
           <input
@@ -16,6 +16,7 @@
             required
           />
           <button class="form-control btn" type="submit">Deposit</button>
+          <p *ngIf="errMessage">Enter amount more than 100</p>
         </div>
       </form>
     </div>

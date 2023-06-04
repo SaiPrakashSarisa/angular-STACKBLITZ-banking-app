@@ -147,11 +147,36 @@ export class RegistrationComponent implements OnInit {
     }
   }
 
+  get dateTime(): any {
+    let timeStamp = new Date();
+    let date: any = timeStamp.getDate();
+    let month: any = timeStamp.getMonth();
+    let year: any = timeStamp.getFullYear();
+    let hours: any = timeStamp.getHours();
+    let minutes: any = timeStamp.getMinutes();
+    let seconds: any = timeStamp.getSeconds();
+
+    if (Number(date) < 10) {
+      date = 0 + String(date);
+    }
+    if (Number(month) < 10) {
+      month = '0' + month;
+    }
+    if (Number(hours) < 10) {
+      hours = '0' + hours;
+    }
+    if (Number(minutes) < 10) {
+      minutes = '0' + minutes;
+    }
+    if (Number(seconds) < 10) {
+      seconds = '0' + seconds;
+    }
+    return year + month + date + hours + minutes + seconds;
+  }
+
   registerUser() {
     console.log(this.registerForm.value);
-    console.log(this.registerForm);
-    console.log(this.firstname?.value);
-
+    console.log(this.dateTime);
     if (this.registerForm.valid) {
       console.log(this.registerForm.value);
 
@@ -161,6 +186,8 @@ export class RegistrationComponent implements OnInit {
         userName: this.username!.value,
         email: this.email!.value,
         password: this.password!.value,
+        account: this.dateTime,
+        contact: this.contact!.value,
         address: {
           street: this.street?.value,
           city: this.city?.value,
