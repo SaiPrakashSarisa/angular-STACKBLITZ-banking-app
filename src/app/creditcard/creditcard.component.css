@@ -15,6 +15,7 @@
 
 .inner-container {
   height: 90%;
+  width: 99%;
   overflow: auto;
   display: flex;
   flex-wrap: wrap;

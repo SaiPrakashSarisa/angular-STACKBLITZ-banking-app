@@ -11,7 +11,7 @@ export class CreditcardComponent implements OnInit {
   creditCards: any[] = [];
 
   newCardForm: boolean = false;
-  editCardForm: boolean = false;
+  editCardForm: boolean = true;
 
   selectedCard: any;
 
@@ -55,11 +55,9 @@ export class CreditcardComponent implements OnInit {
         card.cardType = updatedCard.cardType;
         card.expDate = updatedCard.expDate;
         card.bank = updatedCard.bank;
-        card.card1 = updatedCard.card1;
-        card.card2 = updatedCard.card2;
-        card.card3 = updatedCard.card3;
-        card.card4 = updatedCard.card4;
       }
+
+      localStorage.setItems('creditCards', JSON.stringify(this.creditCards));
     });
   }
 }

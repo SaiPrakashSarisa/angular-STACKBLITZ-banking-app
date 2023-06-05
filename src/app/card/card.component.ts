@@ -22,11 +22,17 @@ export class CardComponent implements OnInit {
   @Input()
   creditCard!: CreditCard;
 
+  user: any;
+
   imageUrl = 'assets/chip.png';
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // getting all the data of the current logged user
+    let userData = localStorage.getItem('currentUser');
+    this.user = userData ? JSON.parse(userData) : {};
+  }
 
   hologram: string =
     'https://images.rawpixel.com/image_400/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQ0My01LTA5LWV5ZS0wMS5qcGc.jpg';

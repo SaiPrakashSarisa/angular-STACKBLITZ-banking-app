@@ -4,9 +4,12 @@
     <div class="balance-outer">
       <div class="balance-inner">
         <p class="label">Current Balance</p>
-        <p class="value">
+        <p class="value" *ngIf="userTransactions.length != 0; else elseP">
           {{ userTransactions[userTransactions.length - 1].balance }}₹ /-
         </p>
+        <ng-template #elseP>
+          <p class="value">0 ₹ /-</p>
+        </ng-template>
       </div>
     </div>
     <div class="transactions">

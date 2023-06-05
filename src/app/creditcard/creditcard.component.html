@@ -15,10 +15,7 @@
     <app-newcardform></app-newcardform>
   </div>
   <div class="editcardform form" *ngIf="editCardForm">
-    <app-editcardform
-      [cardData]="selectedCard"
-      (editedCard)="updateCard($event)"
-    ></app-editcardform>
+    <app-editcardform [cardData]="selectedCard"></app-editcardform>
   </div>
 </div>
 <app-footer></app-footer>

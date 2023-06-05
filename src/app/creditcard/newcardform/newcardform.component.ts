@@ -32,17 +32,19 @@ export class NewcardformComponent implements OnInit {
   });
 
   cardSubmit() {
-    let card = {
-      account: this.user.account,
-      cardNumber: this.newCard.get('cardNumber')!.value,
-      cvv: this.newCard.get('cvv')!.value,
-      cardType: this.newCard.get('cardType')!.value,
-      expDate: this.newCard.get('expDate')!.value,
-      bank: this.newCard.get('bank')!.value,
-    };
+    if (this.newCard.valid) {
+      let card = {
+        account: this.user.account,
+        cardNumber: this.newCard.get('cardNumber')!.value,
+        cvv: this.newCard.get('cvv')!.value,
+        cardType: this.newCard.get('cardType')!.value,
+        expDate: this.newCard.get('expDate')!.value,
+        bank: this.newCard.get('bank')!.value,
+      };
 
-    this.creditCards.push(card);
-    localStorage.setItem('creditCards', JSON.stringify(this.creditCards));
-    console.log(this.creditCards);
+      this.creditCards.push(card);
+      localStorage.setItem('creditCards', JSON.stringify(this.creditCards));
+      console.log(this.creditCards);
+    }
   }
 }
