@@ -1,20 +1,27 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-newcardform',
+  selector: 'app-newcardform:not(a)',
   templateUrl: './newcardform.component.html',
   styleUrls: ['./newcardform.component.css'],
 })
 export class NewcardformComponent implements OnInit {
-  @Output()
-  newCardAdded = new EventEmitter();
+  user: any;
 
   constructor() {}
 
   creditCards = [{}];
 
-  ngOnInit() {}
+  ngOnInit() {
+    // getting all the data of the current logged user
+    let userData = localStorage.getItem('currentUser');
+    this.user = userData ? JSON.parse(userData) : {};
+
+    let creditCards = localStorage.getItem('creditCards');
+    this.creditCards = creditCards ? JSON.parse(creditCards) : [];
+  }
 
   newCard = new FormGroup({
     cardNumber: new FormControl(''),
@@ -25,28 +32,17 @@ export class NewcardformComponent implements OnInit {
   });
 
   cardSubmit() {
-    let card1 = String(this.newCard.get('cardNumber')!.value)!.slice(0, 4);
-
-    let card2 = String(this.newCard.get('cardNumber')!.value)!.slice(4, 8);
-
-    let card3 = String(this.newCard.get('cardNumber')!.value)!.slice(8, 12);
-
-    let card4 = String(this.newCard.get('cardNumber')!.value)!.slice(12, 16);
-
     let card = {
+      account: this.user.account,
       cardNumber: this.newCard.get('cardNumber')!.value,
       cvv: this.newCard.get('cvv')!.value,
       cardType: this.newCard.get('cardType')!.value,
       expDate: this.newCard.get('expDate')!.value,
       bank: this.newCard.get('bank')!.value,
-      card1: card1,
-      card2: card2,
-      card3: card3,
-      card4: card4,
     };
 
-    this.newCardAdded.emit(card);
     this.creditCards.push(card);
+    localStorage.setItem('creditCards', JSON.stringify(this.creditCards));
     console.log(this.creditCards);
   }
 }

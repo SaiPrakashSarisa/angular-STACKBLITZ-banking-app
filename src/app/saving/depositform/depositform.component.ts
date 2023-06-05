@@ -12,7 +12,7 @@ export class DepositformComponent implements OnInit {
   transactions: any;
   errMessage: boolean = false;
   sucessMessage: boolean = false;
-  route: Router = new Router();
+
   depositForm = new FormGroup({
     amount: new FormControl('', [Validators.required, Validators.min(101)]),
   });
@@ -66,8 +66,5 @@ export class DepositformComponent implements OnInit {
     }
 
     console.log('Transaction Object is created ', currentTransaction);
-    // this.route.navigate(['/usersavings']);
-
-    this.route.navigate(['/usersavings']);
   }
 }
