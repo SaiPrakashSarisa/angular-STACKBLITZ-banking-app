@@ -6,64 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./saving.component.css'],
 })
 export class SavingComponent implements OnInit {
-  transactions = [
-    {
-      account: '202302134100',
-      type: 'credit',
-      amount: 500,
-      date: '2023-05-04',
-      time: '06:00:00',
-      balance: 1900,
-    },
-    {
-      account: '202302134100',
-      type: 'debit',
-      amount: 1500,
-      date: '2023-05-04',
-      time: '06:13:00',
-      balance: 1400,
-    },
-    {
-      account: '202302134100',
-      type: 'credit',
-      amount: 2500,
-      date: '2023-05-04',
-      time: '06:30:00',
-      balance: 2900,
-    },
-    {
-      account: '202302134100',
-      type: 'debit',
-      amount: 500,
-      date: '2023-05-04',
-      time: '06:45:00',
-      balance: 400,
-    },
-    {
-      account: '202302134100',
-      type: 'debit',
-      amount: 200,
-      date: '2023-04-05',
-      time: '05:39:52',
-      balance: 900,
-    },
-    {
-      account: '202302134100',
-      type: 'credit',
-      amount: 100,
-      date: '2023-04-05',
-      time: '05:40:05',
-      balance: 1100,
-    },
-    {
-      account: '202302134100',
-      type: 'credit',
-      amount: 1000,
-      date: '2023-04-05',
-      time: '06:17:18',
-      balance: 1000,
-    },
-  ];
+  user: any;
+  transactions: any;
+  // currentUserTransactions: any;
+  userTransactions: any;
 
   showDepositform: boolean = false;
   showWithdrawform: boolean = false;
@@ -71,5 +17,36 @@ export class SavingComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // getting all the data of the current logged user
+    let userData = localStorage.getItem('currentUser');
+    this.user = userData ? JSON.parse(userData) : {};
+
+    // getting all the transactions
+    let transactions = localStorage.getItem('transactions');
+    this.transactions = transactions ? JSON.parse(transactions) : [];
+
+    let currentUserTransactions = this.transactions.filter(
+      (transaction: any) => {
+        return transaction.account === this.user.account;
+      }
+    );
+    let balance: number = 0;
+    let totalBalance: number = 0;
+    this.userTransactions = currentUserTransactions.map((transaction: any) => {
+      if (transaction.type === 'credit') {
+        totalBalance += Number(transaction.amount);
+        balance = totalBalance;
+        return (transaction = { ...transaction, balance });
+      } else {
+        totalBalance -= transaction.amount;
+        balance = totalBalance;
+        return (transaction = { ...transaction, balance });
+      }
+    });
+
+    console.log(currentUserTransactions);
+
+    console.log(this.userTransactions);
+  }
 }

@@ -4,7 +4,9 @@
     <div class="balance-outer">
       <div class="balance-inner">
         <p class="label">Current Balance</p>
-        <p class="value">{{ transactions[0].balance }} ₹ /-</p>
+        <p class="value">
+          {{ userTransactions[userTransactions.length - 1].balance }} ₹ /-
+        </p>
       </div>
     </div>
     <div class="transactions">
@@ -17,7 +19,7 @@
           <th>Balance</th>
         </thead>
         <tbody>
-          <tr *ngFor="let transaction of transactions">
+          <tr *ngFor="let transaction of userTransactions">
             <td>{{ transaction.date }}</td>
             <td>{{ transaction.time }}</td>
             <td *ngIf="transaction.type === 'credit'" style="color:green">
