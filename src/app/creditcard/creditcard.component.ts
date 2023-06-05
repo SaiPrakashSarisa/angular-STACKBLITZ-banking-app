@@ -11,7 +11,7 @@ export class CreditcardComponent implements OnInit {
   creditCards: any[] = [];
 
   newCardForm: boolean = false;
-  editCardForm: boolean = true;
+  editCardForm: boolean = false;
 
   selectedCard: any;
 
@@ -44,7 +44,7 @@ export class CreditcardComponent implements OnInit {
 
   editCard(card: any) {
     this.selectedCard = card;
-    console.log(this.selectedCard);
+    // console.log(this.selectedCard);
   }
 
   updateCard(updatedCard: any) {
@@ -57,7 +57,7 @@ export class CreditcardComponent implements OnInit {
         card.bank = updatedCard.bank;
       }
 
-      localStorage.setItems('creditCards', JSON.stringify(this.creditCards));
+      localStorage.setItem('creditCards', JSON.stringify(this.creditCards));
     });
   }
 }

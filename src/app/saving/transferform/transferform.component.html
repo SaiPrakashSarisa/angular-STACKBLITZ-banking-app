@@ -4,22 +4,22 @@
   </div>
   <div class="row">
     <div class="col">
-      <form>
+      <form [formGroup]="transferForm" (ngSubmit)="transfer()">
         <div class="form-group">
-          <label for="accNumber"></label>
+          <label for="taccount"></label>
           <input
             type="text"
-            name="accNumber"
-            formControlName="accNumber"
+            name="taccount"
+            formControlName="taccount"
             class="form-control"
             placeholder="Enter Account Number"
             required
           />
-          <label for="tamount"></label>
+          <label for="amount"></label>
           <input
-            type="text"
-            name="tamount"
-            formControlName="tamount"
+            type="number"
+            name="amount"
+            formControlName="amount"
             class="form-control"
             placeholder="Enter Amount to transfer"
             required

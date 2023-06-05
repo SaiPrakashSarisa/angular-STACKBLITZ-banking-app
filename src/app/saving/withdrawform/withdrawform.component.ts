@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { SavingComponent } from '../saving.component';
 
 @Component({
   selector: 'app-withdrawform',
@@ -8,6 +7,9 @@ import { SavingComponent } from '../saving.component';
   styleUrls: ['./withdrawform.component.css'],
 })
 export class WithdrawformComponent implements OnInit {
+  @Output()
+  wformSubmitted = new EventEmitter();
+
   user: any;
   transactions: any;
   errMessage: boolean = false;
@@ -91,6 +93,8 @@ export class WithdrawformComponent implements OnInit {
     } else {
       this.errMessage = true;
     }
+
+    this.wformSubmitted.emit();
     console.log(currentTransaction);
   }
 }

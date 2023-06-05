@@ -21,7 +21,7 @@
           <th>Amount</th>
           <th>Balance</th>
         </thead>
-        <tbody>
+        <tbody class="scrollable-table-body">
           <tr *ngFor="let transaction of userTransactions">
             <td>{{ transaction.date }}</td>
             <td>{{ transaction.time }}</td>
@@ -63,13 +63,13 @@
     </div>
   </div>
   <div class="deposit float-form" *ngIf="showDepositform">
-    <app-depositform></app-depositform>
+    <app-depositform (dformSubmitted)="dformSubmit()"></app-depositform>
   </div>
   <div class="withdraw float-form" *ngIf="showWithdrawform">
-    <app-withdrawform></app-withdrawform>
+    <app-withdrawform (wformSubmitted)="wformSubmit()"></app-withdrawform>
   </div>
   <div class="transfer float-form" *ngIf="showTransferform">
-    <app-transferform></app-transferform>
+    <app-transferform (transfered)="tformSubmit()"></app-transferform>
   </div>
 </div>
 

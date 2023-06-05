@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-depositform:not(s)',
@@ -8,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./depositform.component.css'],
 })
 export class DepositformComponent implements OnInit {
+  @Output()
+  dformSubmitted = new EventEmitter();
+
   user: any;
   transactions: any;
   errMessage: boolean = false;
@@ -64,7 +66,7 @@ export class DepositformComponent implements OnInit {
     } else {
       this.errMessage = true;
     }
-
+    this.dformSubmitted.emit();
     console.log('Transaction Object is created ', currentTransaction);
   }
 }

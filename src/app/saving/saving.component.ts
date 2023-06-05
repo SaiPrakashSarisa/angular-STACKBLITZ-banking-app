@@ -44,9 +44,18 @@ export class SavingComponent implements OnInit {
         return (transaction = { ...transaction, balance });
       }
     });
+    // console.log(currentUserTransactions);
+    // console.log(this.userTransactions);
+  }
 
-    console.log(currentUserTransactions);
+  dformSubmit() {
+    this.showDepositform = false;
+  }
 
-    console.log(this.userTransactions);
+  wformSubmit() {
+    this.showWithdrawform = false;
+  }
+  tformSubmit() {
+    this.showTransferform = false;
   }
 }
