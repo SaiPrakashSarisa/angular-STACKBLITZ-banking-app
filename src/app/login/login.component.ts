@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     this.users = userData ? JSON.parse(userData) : [];
 
     const loggedUser = this.users.find((user) => {
-      if (user.userName === this.username) {
+      if (user.userName === this.username && user.password === this.password) {
         this.currentUser = user;
         this.route.navigate(['/dashboard']);
 
