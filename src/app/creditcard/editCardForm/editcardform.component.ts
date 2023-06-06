@@ -36,7 +36,7 @@ export class EditcardformComponent implements OnInit {
   editCard() {
     console.log(this.editFormGroup.value);
 
-    let editedCard = {
+    const editCard = {
       account: this.user.account,
       cardNumber: this.editFormGroup.get('cardNumber')!.value,
       cvv: this.editFormGroup.get('cvv')!.value,
@@ -45,6 +45,6 @@ export class EditcardformComponent implements OnInit {
       bank: this.editFormGroup.get('bank')!.value,
     };
 
-    this.editedCard.emit(editedCard);
+    this.editedCard.emit(editCard);
   }
 }
